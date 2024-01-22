@@ -9,10 +9,7 @@ import { SiteContextProvider } from "./context/SiteContext.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <SiteContextProvider>
-      <ThemeProvider theme={darkTheme}>
-        <GlobalStyle />
-        <App />
-      </ThemeProvider>
+      <App />
     </SiteContextProvider>
   </React.StrictMode>
 );
