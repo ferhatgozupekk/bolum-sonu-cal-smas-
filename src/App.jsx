@@ -1,29 +1,16 @@
-import { StyledHeader } from "./components/styled/Header.styled";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <StyledHeader>
-        <nav>
-          <ul>
-            <li>
-              <strong>Pico Clone</strong>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="#">Link</a>
-            </li>
-            <li>
-              <a href="#">Link</a>
-            </li>
-            <li>
-              <a href="#">Button</a>
-            </li>
-          </ul>
-        </nav>
-        <div className="clear-fix"></div>
-      </StyledHeader>
+      <Header />
+
+      <div className="app">
+        <br />
+        <br />
+        <h1>Hello My Project</h1>
+        <h1>Nice to meet you</h1>
+      </div>
     </>
   );
 }

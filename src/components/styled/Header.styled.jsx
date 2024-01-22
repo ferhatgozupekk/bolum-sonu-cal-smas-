@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  border-bottom: 1px solid var(--silver);
+  border-bottom: 1px solid ${({ theme }) => theme.colors.silver};
 
   & > nav {
-    width: var(--box-size);
+    width: ${({ theme }) => theme.sizes.boxSize};
     margin: 0 auto;
 
     & > ul {
@@ -20,24 +20,24 @@ export const StyledHeader = styled.header`
         margin-right: 10px;
 
         &:last-child > a {
-          background-color: var(--blue);
-          color: var(--bg-color);
+          background-color: ${({ theme }) => theme.colors.bgColor};
+          color: ${({ theme }) => theme.colors.bgColor};
 
           &:hover {
-            background-color: var(--dark-blue);
-            color: var(--blue);
+            background-color: ${({ theme }) => theme.colors.darkBlue};
+            color: ${({ theme }) => theme.colors.blue};
           }
         }
 
         & > a {
           text-decoration: none;
-          color: var(--link-color);
+          color: ${({ theme }) => theme.colors.linkColor};
           padding: 8px 12px;
           border-radius: 4px;
 
           &:hover {
-            color: var(--link-color-hover);
-            background-color: var(--silver);
+            color: ${({ theme }) => theme.colors.linkColorHover};
+            background-color: ${({ theme }) => theme.colors.silver};
           }
         }
       }
