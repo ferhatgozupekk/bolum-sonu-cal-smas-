@@ -1,8 +1,12 @@
 import { StyledHeader } from "./styled/Header.styled";
 import { BsFillSunFill } from "react-icons/bs";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import { useContext } from "react";
+import { SiteContext } from "../context/SiteContext";
 
 function Header() {
+  const { themeName, handleTheme } = useContext(SiteContext);
+
   return (
     <StyledHeader>
       <nav>
@@ -19,10 +23,13 @@ function Header() {
             <a href="#">Link</a>
           </li>
           <li>
-            <a href="#">
-              <BsFillSunFill />
-              <BsFillMoonStarsFill />
-            </a>
+            <span onClick={handleTheme}>
+              {themeName === "light" ? (
+                <BsFillMoonStarsFill />
+              ) : (
+                <BsFillSunFill />
+              )}
+            </span>
           </li>
         </ul>
       </nav>
